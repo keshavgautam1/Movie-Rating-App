@@ -1,5 +1,3 @@
-// reducers/index.js
-
 import { combineReducers } from "redux";
 import {
   SET_RATING,
@@ -11,14 +9,12 @@ import {
   ADD_SEARCH_RESULT,
 } from "../actions";
 
-// Initial state for movies
 const initialMoviesState = {
   list: [],
   favourites: [],
   showFavourites: false,
 };
 
-// Movies reducer
 function movies(state = initialMoviesState, action) {
   switch (action.type) {
     case ADD_MOVIES:
@@ -68,7 +64,6 @@ function movies(state = initialMoviesState, action) {
   }
 }
 
-// Initial state for search
 const initialSearchState = {
   result: {},
   showSearchResults: false,
@@ -93,7 +88,6 @@ function search(state = initialSearchState, action) {
   }
 }
 
-// Combine reducers
 export default combineReducers({
   movies,
   search,

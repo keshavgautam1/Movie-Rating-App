@@ -4,7 +4,6 @@ import { data as moviesList } from "../data";
 import Navbar from "./Navbar";
 import MovieCard from "./MovieCard";
 import { addMovies, setShowFavourites } from "../actions";
-// import { connect } from "../index";
 
 class App extends React.Component {
   componentDidMount() {
@@ -66,16 +65,6 @@ class App extends React.Component {
     );
   }
 }
-
-// class AppWrapper extends React.Component {
-//   render() {
-//     return (
-//       <StoreContext.Consumer>
-//         {(store) => <App store={store} />}
-//       </StoreContext.Consumer>
-//     );
-//   }
-// }
 
 function mapStateToProps(state) {
   return {
